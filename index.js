@@ -1,5 +1,23 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // create object to keep track of all numbers
+  const seen = {}
+
+  //Iterate over the array of numbers
+  for (const number of array) {
+    //Identify complimentary number that adds to our target
+    const comp = target - number;
+
+    //Check if any key in array complements the current number
+  if(seen[comp]) return true;
+
+  //Save current number as key on our object
+  seen[number] = true;
+
+  }
+
+  return false;
+  
+
 }
 
 /* 
